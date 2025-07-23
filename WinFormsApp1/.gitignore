@@ -1,0 +1,14 @@
+# Visual Studio için önerilen .gitignore içeriði
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.pdb
+*.exe
+*.dll
