@@ -116,7 +116,7 @@ partial class Form1
         Icon = (Icon)resources.GetObject("$this.Icon");
         Margin = new Padding(3, 2, 3, 2);
         Name = "Form1";
-        Text = "Form1";
+        Text = "Ana Menü";
         Load += Form1_Load;
         panel1.ResumeLayout(false);
         ResumeLayout(false);

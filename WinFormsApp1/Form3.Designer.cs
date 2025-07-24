@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panel1 = new Panel();
             button2 = new Button();
             label1 = new Label();
             button1 = new Button();
-            flowLayoutPanel2 = new FlowLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -89,14 +91,6 @@
             button1.Text = "YENİ SİPARİŞ OLUŞTUR";
             button1.UseVisualStyleBackColor = false;
             // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.BackColor = SystemColors.GradientInactiveCaption;
-            flowLayoutPanel2.Location = new Point(22, 221);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(542, 185);
-            flowLayoutPanel2.TabIndex = 4;
-            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = SystemColors.GradientInactiveCaption;
@@ -105,18 +99,29 @@
             flowLayoutPanel1.Size = new Size(542, 185);
             flowLayoutPanel1.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(22, 221);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(542, 185);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 446);
-            Controls.Add(flowLayoutPanel2);
+            Controls.Add(dataGridView1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
-            Text = "Form3";
+            Text = "Siparişler";
             Load += Form3_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -126,7 +131,7 @@
         private Button button2;
         private Label label1;
         private Button button1;
-        private FlowLayoutPanel flowLayoutPanel2;
         private FlowLayoutPanel flowLayoutPanel1;
+        private DataGridView dataGridView1;
     }
 }

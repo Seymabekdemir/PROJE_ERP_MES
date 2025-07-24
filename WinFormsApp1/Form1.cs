@@ -17,12 +17,14 @@ public partial class Form1 : Form
 
     }
 
+    //ana menüdeki cihazlar butonuna týklandýðýnda Form2 açýlacak
     private void button1_Click(object sender, EventArgs e)
     {
         Form2 form2 = new Form2();
         form2.Show();
     }
 
+    // burada da ana menüdeki sipariþler butonuna týklandýðýnda Form3 açýlacak
     private void button2_Click(object sender, EventArgs e)
     {
         Form3 form3 = new Form3();

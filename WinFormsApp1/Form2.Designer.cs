@@ -1,4 +1,5 @@
-﻿namespace ERP_MES
+﻿
+namespace ERP_MES
 {
     partial class Form2
     {
@@ -34,10 +35,11 @@
             button3 = new Button();
             button2 = new Button();
             label1 = new Label();
-            button1 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
+            btnCihazGoruntule = new Button();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -47,7 +49,7 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnCihazGoruntule);
             panel1.Location = new Point(581, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(237, 394);
@@ -80,7 +82,7 @@
             button3.Name = "button3";
             button3.Size = new Size(195, 42);
             button3.TabIndex = 3;
-            button3.Text = "CİHAZ GÖRÜNTÜLE";
+            button3.Text = "CİHAZ DÜZENLE";
             button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -97,6 +99,7 @@
             button2.TabIndex = 2;
             button2.Text = "CİHAZ EKLE";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -110,36 +113,47 @@
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
-            // button1
+            // btnCihazGoruntule
             // 
-            button1.BackColor = Color.Thistle;
-            button1.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            button1.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-            button1.FlatAppearance.MouseOverBackColor = Color.Violet;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button1.Location = new Point(22, 61);
-            button1.Name = "button1";
-            button1.Size = new Size(195, 42);
-            button1.TabIndex = 0;
-            button1.Text = "CİHAZ GÖRÜNTÜLE";
-            button1.UseVisualStyleBackColor = false;
+            btnCihazGoruntule.BackColor = Color.Thistle;
+            btnCihazGoruntule.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btnCihazGoruntule.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
+            btnCihazGoruntule.FlatAppearance.MouseOverBackColor = Color.Violet;
+            btnCihazGoruntule.FlatStyle = FlatStyle.Flat;
+            btnCihazGoruntule.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnCihazGoruntule.Location = new Point(22, 60);
+            btnCihazGoruntule.Name = "btnCihazGoruntule";
+            btnCihazGoruntule.Size = new Size(195, 42);
+            btnCihazGoruntule.TabIndex = 0;
+            btnCihazGoruntule.Text = "CİHAZ GÖRÜNTÜLE";
+            btnCihazGoruntule.UseVisualStyleBackColor = false;
+            btnCihazGoruntule.Click += button1_Click;
             // 
-            // flowLayoutPanel1
+            // dataGridView1
             // 
-            flowLayoutPanel1.BackColor = SystemColors.GradientInactiveCaption;
-            flowLayoutPanel1.Location = new Point(22, 12);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(542, 185);
-            flowLayoutPanel1.TabIndex = 1;
+            dataGridView1.BackgroundColor = SystemColors.Info;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = SystemColors.Info;
+            dataGridView1.Location = new Point(22, 72);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(542, 334);
+            dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // flowLayoutPanel2
+            // label2
             // 
-            flowLayoutPanel2.BackColor = SystemColors.GradientInactiveCaption;
-            flowLayoutPanel2.Location = new Point(22, 221);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(542, 185);
-            flowLayoutPanel2.TabIndex = 2;
+            label2.BackColor = SystemColors.GradientInactiveCaption;
+            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
+            label2.ForeColor = SystemColors.ControlText;
+            label2.ImageAlign = ContentAlignment.TopLeft;
+            label2.Location = new Point(22, 12);
+            label2.Name = "label2";
+            label2.Padding = new Padding(25, 10, 10, 5);
+            label2.Size = new Size(542, 53);
+            label2.TabIndex = 4;
+            label2.Text = "Firmamızın ürettiği cihazlar:";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            label2.Click += label2_Click;
             // 
             // Form2
             // 
@@ -147,26 +161,28 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(830, 446);
-            Controls.Add(flowLayoutPanel2);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(label2);
+            Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
-            Text = "Form2";
+            Text = "Cihazlar";
             Load += Form2_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
+
 
         #endregion
 
         private Panel panel1;
-        private Button button1;
+        private Button btnCihazGoruntule;
         private Label label1;
         private Button button4;
         private Button button3;
         private Button button2;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }
