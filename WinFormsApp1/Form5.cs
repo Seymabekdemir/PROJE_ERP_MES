@@ -43,7 +43,7 @@ namespace ERP_MES
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bağlantı hatası oluştu işleminiz gerçekleştirilemedi!!! " + ex.Message);
+                MessageBox.Show("Bağlantı hatası oluştu işleminiz gerçekleştirilemedi: " + ex.Message);
             }
             finally
             {

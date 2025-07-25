@@ -42,6 +42,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightSteelBlue;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);

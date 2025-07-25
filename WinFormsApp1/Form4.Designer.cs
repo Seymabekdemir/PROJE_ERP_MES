@@ -144,6 +144,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Thistle;
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(textBoxGoruntuleCihazAciklamasi);
             panel1.Controls.Add(label5);
@@ -155,7 +156,7 @@
             panel1.Controls.Add(textBoxGoruntuleCihazId);
             panel1.Location = new Point(449, 41);
             panel1.Name = "panel1";
-            panel1.Size = new Size(369, 284);
+            panel1.Size = new Size(369, 291);
             panel1.TabIndex = 11;
             // 
             // Form4

@@ -44,7 +44,7 @@ namespace ERP_MES
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightSteelBlue;
+            panel1.BackColor = Color.Thistle;
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -57,47 +57,48 @@ namespace ERP_MES
             // 
             // button4
             // 
-            button4.BackColor = Color.Thistle;
+            button4.BackColor = Color.LavenderBlush;
             button4.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            button4.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-            button4.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button4.Location = new Point(22, 235);
+            button4.Location = new Point(22, 234);
             button4.Name = "button4";
-            button4.Size = new Size(195, 42);
+            button4.Size = new Size(195, 52);
             button4.TabIndex = 4;
-            button4.Text = "CİHAZ SİL";
+            button4.Text = "Cihaz Sil";
             button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            button3.BackColor = Color.Thistle;
+            button3.BackColor = Color.LavenderBlush;
             button3.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            button3.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-            button3.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button3.Location = new Point(21, 176);
+            button3.Location = new Point(22, 176);
             button3.Name = "button3";
-            button3.Size = new Size(195, 42);
+            button3.Size = new Size(195, 52);
             button3.TabIndex = 3;
-            button3.Text = "CİHAZ DÜZENLE";
+            button3.Text = "Cihaz Bilgilerini Düzenle ve Güncelle";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.BackColor = Color.Thistle;
+            button2.BackColor = Color.LavenderBlush;
             button2.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            button2.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-            button2.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             button2.Location = new Point(22, 118);
             button2.Name = "button2";
-            button2.Size = new Size(195, 42);
+            button2.Size = new Size(195, 52);
             button2.TabIndex = 2;
-            button2.Text = "CİHAZ EKLE";
+            button2.Text = "Yeni Cihaz Ekle";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -115,23 +116,24 @@ namespace ERP_MES
             // 
             // btnCihazGoruntule
             // 
-            btnCihazGoruntule.BackColor = Color.Thistle;
+            btnCihazGoruntule.BackColor = Color.LavenderBlush;
             btnCihazGoruntule.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btnCihazGoruntule.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-            btnCihazGoruntule.FlatAppearance.MouseOverBackColor = Color.Violet;
+            btnCihazGoruntule.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+            btnCihazGoruntule.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
             btnCihazGoruntule.FlatStyle = FlatStyle.Flat;
             btnCihazGoruntule.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
             btnCihazGoruntule.Location = new Point(22, 60);
             btnCihazGoruntule.Name = "btnCihazGoruntule";
-            btnCihazGoruntule.Size = new Size(195, 42);
+            btnCihazGoruntule.Size = new Size(195, 52);
             btnCihazGoruntule.TabIndex = 0;
-            btnCihazGoruntule.Text = "CİHAZ GÖRÜNTÜLE";
+            btnCihazGoruntule.Text = "Cihaz Bilgilerini\r\nGörüntüle";
             btnCihazGoruntule.UseVisualStyleBackColor = false;
             btnCihazGoruntule.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.Info;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(22, 72);

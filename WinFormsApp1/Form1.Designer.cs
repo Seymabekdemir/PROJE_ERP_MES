@@ -40,7 +40,8 @@ partial class Form1
         // 
         // panel1
         // 
-        panel1.BackColor = Color.LightSteelBlue;
+        panel1.BackColor = Color.Thistle;
+        panel1.BorderStyle = BorderStyle.Fixed3D;
         panel1.Controls.Add(label2);
         panel1.Controls.Add(button2);
         panel1.Controls.Add(button1);
@@ -62,10 +63,10 @@ partial class Form1
         // 
         // button2
         // 
-        button2.BackColor = Color.Thistle;
+        button2.BackColor = Color.LavenderBlush;
         button2.FlatAppearance.BorderColor = Color.Black;
-        button2.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-        button2.FlatAppearance.MouseOverBackColor = Color.Orchid;
+        button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+        button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
         button2.FlatStyle = FlatStyle.Flat;
         button2.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
         button2.ForeColor = SystemColors.ActiveCaptionText;
@@ -79,10 +80,10 @@ partial class Form1
         // 
         // button1
         // 
-        button1.BackColor = Color.Thistle;
+        button1.BackColor = Color.LavenderBlush;
         button1.FlatAppearance.BorderColor = Color.Black;
-        button1.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
-        button1.FlatAppearance.MouseOverBackColor = Color.Violet;
+        button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 255);
+        button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 192, 255);
         button1.FlatStyle = FlatStyle.Flat;
         button1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
         button1.ForeColor = SystemColors.ActiveCaptionText;

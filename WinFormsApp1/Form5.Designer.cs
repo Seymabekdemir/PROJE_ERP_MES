@@ -38,6 +38,8 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonCihazekle
@@ -48,17 +50,17 @@
             buttonCihazekle.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
             buttonCihazekle.FlatStyle = FlatStyle.Flat;
             buttonCihazekle.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            buttonCihazekle.Location = new Point(564, 351);
+            buttonCihazekle.Location = new Point(444, 339);
             buttonCihazekle.Name = "buttonCihazekle";
             buttonCihazekle.Size = new Size(162, 38);
             buttonCihazekle.TabIndex = 0;
-            buttonCihazekle.Text = "Kaydet";
+            buttonCihazekle.Text = "Ekle";
             buttonCihazekle.UseVisualStyleBackColor = false;
             buttonCihazekle.Click += buttonCihazEkle_Click;
             // 
             // textBoxCihazId
             // 
-            textBoxCihazId.Location = new Point(255, 29);
+            textBoxCihazId.Location = new Point(228, 22);
             textBoxCihazId.Multiline = true;
             textBoxCihazId.Name = "textBoxCihazId";
             textBoxCihazId.Size = new Size(378, 40);
@@ -67,7 +69,7 @@
             // 
             // textBoxCihazAdi
             // 
-            textBoxCihazAdi.Location = new Point(255, 93);
+            textBoxCihazAdi.Location = new Point(228, 86);
             textBoxCihazAdi.Multiline = true;
             textBoxCihazAdi.Name = "textBoxCihazAdi";
             textBoxCihazAdi.Size = new Size(378, 40);
@@ -76,7 +78,7 @@
             // 
             // textBoxCihazTuru
             // 
-            textBoxCihazTuru.Location = new Point(255, 154);
+            textBoxCihazTuru.Location = new Point(228, 147);
             textBoxCihazTuru.Multiline = true;
             textBoxCihazTuru.Name = "textBoxCihazTuru";
             textBoxCihazTuru.Size = new Size(378, 40);
@@ -85,7 +87,7 @@
             // 
             // textBoxCihazAcıklaması
             // 
-            textBoxCihazAcıklaması.Location = new Point(255, 218);
+            textBoxCihazAcıklaması.Location = new Point(228, 211);
             textBoxCihazAcıklaması.Multiline = true;
             textBoxCihazAcıklaması.Name = "textBoxCihazAcıklaması";
             textBoxCihazAcıklaması.Size = new Size(378, 107);
@@ -95,7 +97,7 @@
             // 
             label1.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(36, 29);
+            label1.Location = new Point(9, 22);
             label1.Name = "label1";
             label1.Size = new Size(213, 40);
             label1.TabIndex = 5;
@@ -107,7 +109,7 @@
             // 
             label3.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.ImageAlign = ContentAlignment.BottomCenter;
-            label3.Location = new Point(36, 93);
+            label3.Location = new Point(9, 86);
             label3.Name = "label3";
             label3.Size = new Size(213, 40);
             label3.TabIndex = 7;
@@ -119,7 +121,7 @@
             // 
             label4.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label4.ImageAlign = ContentAlignment.BottomCenter;
-            label4.Location = new Point(36, 154);
+            label4.Location = new Point(9, 147);
             label4.Name = "label4";
             label4.Size = new Size(213, 40);
             label4.TabIndex = 8;
@@ -130,34 +132,45 @@
             // 
             label5.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label5.ImageAlign = ContentAlignment.BottomCenter;
-            label5.Location = new Point(36, 218);
+            label5.Location = new Point(9, 211);
             label5.Name = "label5";
             label5.Size = new Size(213, 47);
             label5.TabIndex = 9;
             label5.Text = "Cihaz Açıklaması:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Thistle;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(buttonCihazekle);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textBoxCihazAcıklaması);
+            panel1.Controls.Add(textBoxCihazTuru);
+            panel1.Controls.Add(textBoxCihazAdi);
+            panel1.Controls.Add(textBoxCihazId);
+            panel1.Location = new Point(23, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(629, 412);
+            panel1.TabIndex = 10;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(textBoxCihazAcıklaması);
-            Controls.Add(textBoxCihazTuru);
-            Controls.Add(textBoxCihazAdi);
-            Controls.Add(textBoxCihazId);
-            Controls.Add(buttonCihazekle);
+            ClientSize = new Size(830, 446);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form5";
             Text = "Cihaz Ekle";
             Load += Form5_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -171,5 +184,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Panel panel1;
     }
 }
