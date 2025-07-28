@@ -30,11 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panel1 = new Panel();
+            button4 = new Button();
+            button3 = new Button();
             button2 = new Button();
             label1 = new Label();
             button1 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
             dataGridView1 = new DataGridView();
+            button5 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -43,6 +46,9 @@
             // 
             panel1.BackColor = Color.LightSteelBlue;
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button1);
@@ -50,6 +56,38 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(237, 394);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Thistle;
+            button4.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            button4.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
+            button4.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button4.Location = new Point(22, 308);
+            button4.Name = "button4";
+            button4.Size = new Size(195, 42);
+            button4.TabIndex = 4;
+            button4.Text = "SİPARİŞ SİL";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Thistle;
+            button3.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            button3.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
+            button3.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button3.Location = new Point(22, 248);
+            button3.Name = "button3";
+            button3.Size = new Size(195, 42);
+            button3.TabIndex = 3;
+            button3.Text = "SİPARİŞİ GÜNCELLE";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -59,12 +97,13 @@
             button2.FlatAppearance.MouseOverBackColor = Color.Violet;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button2.Location = new Point(22, 118);
+            button2.Location = new Point(22, 190);
             button2.Name = "button2";
             button2.Size = new Size(195, 42);
             button2.TabIndex = 2;
             button2.Text = "SİPARİŞ DURUMU İZLE";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -91,31 +130,57 @@
             button1.TabIndex = 0;
             button1.Text = "YENİ SİPARİŞ OLUŞTUR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // flowLayoutPanel1
+            // label2
             // 
-            flowLayoutPanel1.BackColor = SystemColors.GradientInactiveCaption;
-            flowLayoutPanel1.Location = new Point(22, 12);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(542, 185);
-            flowLayoutPanel1.TabIndex = 3;
+            label2.BackColor = SystemColors.GradientInactiveCaption;
+            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
+            label2.ForeColor = SystemColors.ControlText;
+            label2.ImageAlign = ContentAlignment.TopLeft;
+            label2.Location = new Point(21, 12);
+            label2.Name = "label2";
+            label2.Padding = new Padding(25, 10, 10, 5);
+            label2.Size = new Size(542, 53);
+            label2.TabIndex = 6;
+            label2.Text = "Güncel Sipariş Listesi:";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Info;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(22, 221);
+            dataGridView1.GridColor = SystemColors.Info;
+            dataGridView1.Location = new Point(21, 72);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(542, 185);
-            dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.Size = new Size(542, 334);
+            dataGridView1.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Thistle;
+            button5.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            button5.FlatAppearance.MouseDownBackColor = Color.MediumOrchid;
+            button5.FlatAppearance.MouseOverBackColor = Color.Violet;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            button5.Location = new Point(22, 120);
+            button5.Name = "button5";
+            button5.Size = new Size(195, 51);
+            button5.TabIndex = 5;
+            button5.Text = "SİPARİŞİ AYRINTILI GÖR";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(830, 446);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
@@ -132,7 +197,10 @@
         private Button button2;
         private Label label1;
         private Button button1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Label label2;
         private DataGridView dataGridView1;
+        private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }

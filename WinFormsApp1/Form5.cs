@@ -30,7 +30,8 @@ namespace ERP_MES
             try
             {
                 baglanti.Open();
-                SqlCommand sqlKomut = new SqlCommand("INSERT INTO Cihazlar (CihazId, CihazAdı, CihazAçıklaması, CihazTuru) VALUES (@id, @ad, @aciklama, @tur)", baglanti);
+                SqlCommand sqlKomut = new SqlCommand("INSERT INTO Cihazlar (CihazId, CihazAdı, CihazAçıklaması," +
+                    " CihazTuru) VALUES (@id, @ad, @aciklama, @tur)", baglanti);
                 //parametreleri tanımlıyorum
 
                 sqlKomut.Parameters.AddWithValue("@id", textBoxCihazId.Text);

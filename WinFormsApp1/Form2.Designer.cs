@@ -69,6 +69,7 @@ namespace ERP_MES
             button4.TabIndex = 4;
             button4.Text = "Cihaz Sil";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
