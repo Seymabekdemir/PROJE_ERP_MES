@@ -35,14 +35,14 @@
             btnSil = new Button();
             textBoxSilCihazAciklamasi = new TextBox();
             label5 = new Label();
+            textBoxSilCihazTuru = new TextBox();
             label4 = new Label();
             label3 = new Label();
+            textBoxSilCihazAdi = new TextBox();
             label1 = new Label();
+            textBoxSilCihazId = new TextBox();
             dataGridViewCihazSil = new DataGridView();
             txtAramaCihazSil = new TextBox();
-            textBoxSilCihazId = new TextBox();
-            textBoxSilCihazTuru = new TextBox();
-            textBoxSilCihazAdi = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCihazSil).BeginInit();
             SuspendLayout();
@@ -61,7 +61,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(textBoxSilCihazId);
             panel1.ForeColor = SystemColors.ActiveCaptionText;
-            panel1.Location = new Point(449, 44);
+            panel1.Location = new Point(449, 49);
             panel1.Name = "panel1";
             panel1.Size = new Size(369, 356);
             panel1.TabIndex = 17;
@@ -104,6 +104,15 @@
             label5.TextAlign = ContentAlignment.MiddleLeft;
             label5.Click += label5_Click;
             // 
+            // textBoxSilCihazTuru
+            // 
+            textBoxSilCihazTuru.Location = new Point(169, 116);
+            textBoxSilCihazTuru.Multiline = true;
+            textBoxSilCihazTuru.Name = "textBoxSilCihazTuru";
+            textBoxSilCihazTuru.Size = new Size(189, 36);
+            textBoxSilCihazTuru.TabIndex = 4;
+            textBoxSilCihazTuru.TextChanged += textBoxSilCihazTuru_TextChanged;
+            // 
             // label4
             // 
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold);
@@ -128,6 +137,15 @@
             label3.TextAlign = ContentAlignment.MiddleLeft;
             label3.Click += label3_Click;
             // 
+            // textBoxSilCihazAdi
+            // 
+            textBoxSilCihazAdi.Location = new Point(169, 62);
+            textBoxSilCihazAdi.Multiline = true;
+            textBoxSilCihazAdi.Name = "textBoxSilCihazAdi";
+            textBoxSilCihazAdi.Size = new Size(189, 36);
+            textBoxSilCihazAdi.TabIndex = 3;
+            textBoxSilCihazAdi.TextChanged += textBoxSilCihazAdi_TextChanged;
+            // 
             // label1
             // 
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold);
@@ -139,6 +157,15 @@
             label1.Text = "Cihaz Id:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             label1.Click += label1_Click;
+            // 
+            // textBoxSilCihazId
+            // 
+            textBoxSilCihazId.Location = new Point(169, 10);
+            textBoxSilCihazId.Multiline = true;
+            textBoxSilCihazId.Name = "textBoxSilCihazId";
+            textBoxSilCihazId.Size = new Size(189, 36);
+            textBoxSilCihazId.TabIndex = 2;
+            textBoxSilCihazId.TextChanged += textBoxSilCihazId_TextChanged;
             // 
             // dataGridViewCihazSil
             // 
@@ -161,7 +188,7 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.AliceBlue;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridViewCihazSil.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCihazSil.Location = new Point(12, 44);
+            dataGridViewCihazSil.Location = new Point(12, 49);
             dataGridViewCihazSil.Name = "dataGridViewCihazSil";
             dataGridViewCihazSil.Size = new Size(431, 356);
             dataGridViewCihazSil.TabIndex = 16;
@@ -169,38 +196,11 @@
             // 
             // txtAramaCihazSil
             // 
-            txtAramaCihazSil.Location = new Point(12, 15);
+            txtAramaCihazSil.Location = new Point(12, 20);
             txtAramaCihazSil.Name = "txtAramaCihazSil";
             txtAramaCihazSil.Size = new Size(388, 23);
             txtAramaCihazSil.TabIndex = 15;
             txtAramaCihazSil.TextChanged += txtAramaCihazSil_TextChanged;
-            // 
-            // textBoxSilCihazId
-            // 
-            textBoxSilCihazId.Location = new Point(169, 10);
-            textBoxSilCihazId.Multiline = true;
-            textBoxSilCihazId.Name = "textBoxSilCihazId";
-            textBoxSilCihazId.Size = new Size(189, 36);
-            textBoxSilCihazId.TabIndex = 2;
-            textBoxSilCihazId.TextChanged += textBoxSilCihazId_TextChanged;
-            // 
-            // textBoxSilCihazTuru
-            // 
-            textBoxSilCihazTuru.Location = new Point(169, 116);
-            textBoxSilCihazTuru.Multiline = true;
-            textBoxSilCihazTuru.Name = "textBoxSilCihazTuru";
-            textBoxSilCihazTuru.Size = new Size(189, 36);
-            textBoxSilCihazTuru.TabIndex = 4;
-            textBoxSilCihazTuru.TextChanged += textBoxSilCihazTuru_TextChanged;
-            // 
-            // textBoxSilCihazAdi
-            // 
-            textBoxSilCihazAdi.Location = new Point(169, 62);
-            textBoxSilCihazAdi.Multiline = true;
-            textBoxSilCihazAdi.Name = "textBoxSilCihazAdi";
-            textBoxSilCihazAdi.Size = new Size(189, 36);
-            textBoxSilCihazAdi.TabIndex = 3;
-            textBoxSilCihazAdi.TextChanged += textBoxSilCihazAdi_TextChanged;
             // 
             // Form7
             // 

@@ -58,7 +58,8 @@ namespace ERP_MES
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            Form11 form11 = new Form11();
+            form11.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,7 +75,8 @@ namespace ERP_MES
 
         private void button5_Click(object sender, EventArgs e)
         {
-         
+            Form10 form10 = new Form10();
+            form10.ShowDialog();
         }
     }
 }
