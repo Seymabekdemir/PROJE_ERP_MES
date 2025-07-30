@@ -235,6 +235,10 @@ namespace ERP_MES
             }
         }
 
+        private void comboBoxGuncelleSiparisDurumu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

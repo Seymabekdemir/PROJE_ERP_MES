@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             panel1 = new Panel();
             comboBoxGuncelleSiparisTuru = new ComboBox();
@@ -104,11 +104,12 @@
             // comboBoxGuncelleSiparisDurumu
             // 
             comboBoxGuncelleSiparisDurumu.FormattingEnabled = true;
-            comboBoxGuncelleSiparisDurumu.Items.AddRange(new object[] { "Beklemede", "Onaylandı", "Hazırlanıyor", "Üretimde", "Paketlendi", "Kargoya Verildi", "Teslim Edildi", "Tamamlandı", "İptal Edildi" });
+            comboBoxGuncelleSiparisDurumu.Items.AddRange(new object[] { "Yeni sipariş girildi.", "Sipariş üretimden onay bekliyor.", "Sipariş üretimde.", "Siparişin üretimi tamamlandı.", "Sipariş paketlemede.", "Sipariş kargoya hazır.", "Sipariş kargoya verildi.", "Sipariş alıcıya ulaştı." });
             comboBoxGuncelleSiparisDurumu.Location = new Point(193, 385);
             comboBoxGuncelleSiparisDurumu.Name = "comboBoxGuncelleSiparisDurumu";
             comboBoxGuncelleSiparisDurumu.Size = new Size(215, 28);
             comboBoxGuncelleSiparisDurumu.TabIndex = 29;
+            comboBoxGuncelleSiparisDurumu.SelectedIndexChanged += comboBoxGuncelleSiparisDurumu_SelectedIndexChanged;
             // 
             // comboBoxGuncelleCihazId
             // 
@@ -308,23 +309,23 @@
             // 
             dataGridViewSiparisGuncelle.BackgroundColor = SystemColors.Info;
             dataGridViewSiparisGuncelle.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewSiparisGuncelle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewSiparisGuncelle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewSiparisGuncelle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Info;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.DodgerBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.AliceBlue;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridViewSiparisGuncelle.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Info;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = Color.AliceBlue;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridViewSiparisGuncelle.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewSiparisGuncelle.Location = new Point(14, 67);
             dataGridViewSiparisGuncelle.Margin = new Padding(3, 4, 3, 4);
             dataGridViewSiparisGuncelle.Name = "dataGridViewSiparisGuncelle";
