@@ -78,5 +78,11 @@ namespace ERP_MES
             Form10 form10 = new Form10();
             form10.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form12 form12 = new Form12();   
+            form12.ShowDialog();
+        }
     }
 }
