@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             panel1 = new Panel();
-            dataGridViewSiparisGuncelle = new DataGridView();
-            txtAramaSiparisGuncelle = new TextBox();
-            textBox = new TextBox();
-            textBoxSilCihazAdi = new TextBox();
-            btnSil = new Button();
-            textBoxSilCihazTuru = new TextBox();
-            textBoxSilCihazAciklamasi = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            comboBoxGuncelleSiparisTuru = new ComboBox();
+            comboBoxGuncelleSiparisDurumu = new ComboBox();
+            comboBoxGuncelleCihazId = new ComboBox();
+            label10 = new Label();
+            label9 = new Label();
+            textBoxGuncelleSiparisAdı = new TextBox();
+            label7 = new Label();
+            label8 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             label3 = new Label();
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label8 = new Label();
+            textBoxGuncelleSiparisAcıklaması = new TextBox();
+            textBoxGuncelleSiparisVeren = new TextBox();
+            textBoxGuncelleSiparisMiktarı = new TextBox();
+            btnGuncelleSiparisBilgilerini = new Button();
+            textBoxGuncelleSiparisSTT = new TextBox();
+            textBoxGuncelleSiparisOT = new TextBox();
+            textBoxGuncelleSiparisNo = new TextBox();
+            dataGridViewSiparisGuncelle = new DataGridView();
+            txtAramaSiparisGuncelle = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSiparisGuncelle).BeginInit();
             SuspendLayout();
@@ -59,6 +63,12 @@
             // 
             panel1.BackColor = Color.Thistle;
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(comboBoxGuncelleSiparisTuru);
+            panel1.Controls.Add(comboBoxGuncelleSiparisDurumu);
+            panel1.Controls.Add(comboBoxGuncelleCihazId);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(textBoxGuncelleSiparisAdı);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label5);
@@ -67,231 +77,282 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(btnSil);
-            panel1.Controls.Add(textBoxSilCihazAciklamasi);
-            panel1.Controls.Add(textBoxSilCihazTuru);
-            panel1.Controls.Add(textBoxSilCihazAdi);
-            panel1.Controls.Add(textBox);
+            panel1.Controls.Add(textBoxGuncelleSiparisAcıklaması);
+            panel1.Controls.Add(textBoxGuncelleSiparisVeren);
+            panel1.Controls.Add(textBoxGuncelleSiparisMiktarı);
+            panel1.Controls.Add(btnGuncelleSiparisBilgilerini);
+            panel1.Controls.Add(textBoxGuncelleSiparisSTT);
+            panel1.Controls.Add(textBoxGuncelleSiparisOT);
+            panel1.Controls.Add(textBoxGuncelleSiparisNo);
             panel1.ForeColor = SystemColors.ActiveCaptionText;
-            panel1.Location = new Point(449, 24);
+            panel1.Location = new Point(513, 32);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(369, 410);
+            panel1.Size = new Size(421, 543);
             panel1.TabIndex = 20;
+            panel1.Paint += panel1_Paint;
             // 
-            // dataGridViewSiparisGuncelle
+            // comboBoxGuncelleSiparisTuru
             // 
-            dataGridViewSiparisGuncelle.BackgroundColor = SystemColors.Info;
-            dataGridViewSiparisGuncelle.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewSiparisGuncelle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewSiparisGuncelle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Info;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = Color.AliceBlue;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridViewSiparisGuncelle.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewSiparisGuncelle.Location = new Point(12, 53);
-            dataGridViewSiparisGuncelle.Name = "dataGridViewSiparisGuncelle";
-            dataGridViewSiparisGuncelle.Size = new Size(431, 381);
-            dataGridViewSiparisGuncelle.TabIndex = 19;
+            comboBoxGuncelleSiparisTuru.FormattingEnabled = true;
+            comboBoxGuncelleSiparisTuru.Items.AddRange(new object[] { "Üretim Siparişi", "Bakım Siparişi", "Standart Sipariş", "Acil Sipariş", "Tekrar Sipariş", "Numune Siparişi", "Özel Üretim Siparişi" });
+            comboBoxGuncelleSiparisTuru.Location = new Point(193, 151);
+            comboBoxGuncelleSiparisTuru.Name = "comboBoxGuncelleSiparisTuru";
+            comboBoxGuncelleSiparisTuru.Size = new Size(215, 28);
+            comboBoxGuncelleSiparisTuru.TabIndex = 30;
             // 
-            // txtAramaSiparisGuncelle
+            // comboBoxGuncelleSiparisDurumu
             // 
-            txtAramaSiparisGuncelle.Location = new Point(12, 24);
-            txtAramaSiparisGuncelle.Name = "txtAramaSiparisGuncelle";
-            txtAramaSiparisGuncelle.Size = new Size(388, 23);
-            txtAramaSiparisGuncelle.TabIndex = 18;
+            comboBoxGuncelleSiparisDurumu.FormattingEnabled = true;
+            comboBoxGuncelleSiparisDurumu.Items.AddRange(new object[] { "Beklemede", "Onaylandı", "Hazırlanıyor", "Üretimde", "Paketlendi", "Kargoya Verildi", "Teslim Edildi", "Tamamlandı", "İptal Edildi" });
+            comboBoxGuncelleSiparisDurumu.Location = new Point(193, 385);
+            comboBoxGuncelleSiparisDurumu.Name = "comboBoxGuncelleSiparisDurumu";
+            comboBoxGuncelleSiparisDurumu.Size = new Size(215, 28);
+            comboBoxGuncelleSiparisDurumu.TabIndex = 29;
             // 
-            // textBox
+            // comboBoxGuncelleCihazId
             // 
-            textBox.Location = new Point(169, 12);
-            textBox.Multiline = true;
-            textBox.Name = "textBox";
-            textBox.Size = new Size(189, 22);
-            textBox.TabIndex = 2;
+            comboBoxGuncelleCihazId.FormattingEnabled = true;
+            comboBoxGuncelleCihazId.Location = new Point(193, 295);
+            comboBoxGuncelleCihazId.Name = "comboBoxGuncelleCihazId";
+            comboBoxGuncelleCihazId.Size = new Size(215, 28);
+            comboBoxGuncelleCihazId.TabIndex = 28;
+            comboBoxGuncelleCihazId.SelectedIndexChanged += comboBoxGuncelleCihazId_SelectedIndexChanged;
             // 
-            // textBoxSilCihazAdi
+            // label10
             // 
-            textBoxSilCihazAdi.Location = new Point(169, 46);
-            textBoxSilCihazAdi.Multiline = true;
-            textBoxSilCihazAdi.Name = "textBoxSilCihazAdi";
-            textBoxSilCihazAdi.Size = new Size(189, 22);
-            textBoxSilCihazAdi.TabIndex = 3;
+            label10.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label10.Location = new Point(17, 385);
+            label10.Name = "label10";
+            label10.Size = new Size(157, 29);
+            label10.TabIndex = 27;
+            label10.Text = "Siparis Durumu:";
+            label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // btnSil
+            // label9
             // 
-            btnSil.BackColor = Color.MistyRose;
-            btnSil.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btnSil.FlatAppearance.MouseDownBackColor = Color.Red;
-            btnSil.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
-            btnSil.FlatStyle = FlatStyle.Flat;
-            btnSil.Font = new Font("Times New Roman", 14F, FontStyle.Bold);
-            btnSil.Location = new Point(234, 357);
-            btnSil.Name = "btnSil";
-            btnSil.Size = new Size(128, 36);
-            btnSil.TabIndex = 11;
-            btnSil.Text = "GÜNCELLE";
-            btnSil.UseVisualStyleBackColor = false;
-            btnSil.Click += btnSil_Click;
+            label9.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label9.Location = new Point(17, 336);
+            label9.Name = "label9";
+            label9.Size = new Size(120, 33);
+            label9.TabIndex = 25;
+            label9.Text = "Cihaz Adı:";
+            label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBoxSilCihazTuru
+            // textBoxGuncelleSiparisAdı
             // 
-            textBoxSilCihazTuru.Location = new Point(169, 86);
-            textBoxSilCihazTuru.Multiline = true;
-            textBoxSilCihazTuru.Name = "textBoxSilCihazTuru";
-            textBoxSilCihazTuru.Size = new Size(189, 22);
-            textBoxSilCihazTuru.TabIndex = 4;
-            textBoxSilCihazTuru.TextChanged += textBoxSilCihazTuru_TextChanged;
+            textBoxGuncelleSiparisAdı.Location = new Point(193, 340);
+            textBoxGuncelleSiparisAdı.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisAdı.Multiline = true;
+            textBoxGuncelleSiparisAdı.Name = "textBoxGuncelleSiparisAdı";
+            textBoxGuncelleSiparisAdı.Size = new Size(215, 28);
+            textBoxGuncelleSiparisAdı.TabIndex = 24;
             // 
-            // textBoxSilCihazAciklamasi
+            // label7
             // 
-            textBoxSilCihazAciklamasi.Location = new Point(169, 125);
-            textBoxSilCihazAciklamasi.Multiline = true;
-            textBoxSilCihazAciklamasi.Name = "textBoxSilCihazAciklamasi";
-            textBoxSilCihazAciklamasi.Size = new Size(189, 22);
-            textBoxSilCihazAciklamasi.TabIndex = 5;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label7.Location = new Point(17, 430);
+            label7.Name = "label7";
+            label7.Size = new Size(170, 51);
+            label7.TabIndex = 23;
+            label7.Text = "Sipariş Açıklaması:";
+            label7.TextAlign = ContentAlignment.MiddleLeft;
+            label7.Click += label7_Click;
             // 
-            // textBox1
+            // label8
             // 
-            textBox1.Location = new Point(169, 263);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(189, 88);
-            textBox1.TabIndex = 15;
+            label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            label8.Location = new Point(17, 295);
+            label8.Name = "label8";
+            label8.Size = new Size(95, 24);
+            label8.TabIndex = 22;
+            label8.Text = "Cihaz Id:";
+            label8.TextAlign = ContentAlignment.MiddleLeft;
+            label8.Click += label8_Click;
             // 
-            // textBox2
+            // label5
             // 
-            textBox2.Location = new Point(169, 232);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(189, 22);
-            textBox2.TabIndex = 14;
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label5.Location = new Point(17, 243);
+            label5.Name = "label5";
+            label5.Size = new Size(133, 31);
+            label5.TabIndex = 21;
+            label5.Text = "Sipariş Veren:";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // label6
             // 
-            textBox3.Location = new Point(169, 195);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(189, 22);
-            textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(169, 160);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(189, 22);
-            textBox4.TabIndex = 12;
+            label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            label6.Location = new Point(17, 192);
+            label6.Name = "label6";
+            label6.Size = new Size(170, 47);
+            label6.TabIndex = 20;
+            label6.Text = "Sipariş Miktarı:";
+            label6.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(15, 84);
+            label3.Location = new Point(17, 104);
             label3.Name = "label3";
-            label3.Size = new Size(105, 23);
+            label3.Size = new Size(120, 31);
             label3.TabIndex = 19;
             label3.Text = "Sipariş STT:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            label3.Click += label3_Click;
+            label3.Click += label3_Click_1;
             // 
             // label4
             // 
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(15, 125);
+            label4.Location = new Point(17, 152);
             label4.Name = "label4";
-            label4.Size = new Size(99, 23);
+            label4.Size = new Size(143, 31);
             label4.TabIndex = 18;
             label4.Text = "Sipariş Türü:";
-            label4.Click += this.label4_Click;
             // 
             // label2
             // 
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label2.Location = new Point(15, 45);
+            label2.Location = new Point(17, 60);
             label2.Name = "label2";
-            label2.Size = new Size(99, 20);
+            label2.Size = new Size(113, 27);
             label2.TabIndex = 17;
             label2.Text = "Sipariş OT:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
-            label2.Click += this.label2_Click;
             // 
             // label1
             // 
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label1.Location = new Point(15, 12);
+            label1.Location = new Point(17, 16);
             label1.Name = "label1";
-            label1.Size = new Size(99, 20);
+            label1.Size = new Size(113, 27);
             label1.TabIndex = 16;
             label1.Text = "Sipariş No:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
-            label1.Click += this.label1_Click;
             // 
-            // label7
+            // textBoxGuncelleSiparisAcıklaması
             // 
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label7.Location = new Point(15, 263);
-            label7.Name = "label7";
-            label7.Size = new Size(137, 38);
-            label7.TabIndex = 23;
-            label7.Text = "Sipariş Açıklaması:";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
+            textBoxGuncelleSiparisAcıklaması.Location = new Point(193, 430);
+            textBoxGuncelleSiparisAcıklaması.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisAcıklaması.Multiline = true;
+            textBoxGuncelleSiparisAcıklaması.Name = "textBoxGuncelleSiparisAcıklaması";
+            textBoxGuncelleSiparisAcıklaması.ScrollBars = ScrollBars.Vertical;
+            textBoxGuncelleSiparisAcıklaması.Size = new Size(215, 51);
+            textBoxGuncelleSiparisAcıklaması.TabIndex = 15;
             // 
-            // label5
+            // textBoxGuncelleSiparisVeren
             // 
-            label5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label5.Location = new Point(15, 193);
-            label5.Name = "label5";
-            label5.Size = new Size(116, 23);
-            label5.TabIndex = 21;
-            label5.Text = "Sipariş Veren:";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
-            label5.Click += label5_Click;
+            textBoxGuncelleSiparisVeren.Location = new Point(193, 248);
+            textBoxGuncelleSiparisVeren.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisVeren.Multiline = true;
+            textBoxGuncelleSiparisVeren.Name = "textBoxGuncelleSiparisVeren";
+            textBoxGuncelleSiparisVeren.Size = new Size(215, 28);
+            textBoxGuncelleSiparisVeren.TabIndex = 13;
             // 
-            // label6
+            // textBoxGuncelleSiparisMiktarı
             // 
-            label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label6.Location = new Point(15, 156);
-            label6.Name = "label6";
-            label6.Size = new Size(117, 35);
-            label6.TabIndex = 20;
-            label6.Text = "Sipariş Miktarı:";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
-            label6.Click += label6_Click;
+            textBoxGuncelleSiparisMiktarı.Location = new Point(193, 197);
+            textBoxGuncelleSiparisMiktarı.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisMiktarı.Multiline = true;
+            textBoxGuncelleSiparisMiktarı.Name = "textBoxGuncelleSiparisMiktarı";
+            textBoxGuncelleSiparisMiktarı.Size = new Size(215, 28);
+            textBoxGuncelleSiparisMiktarı.TabIndex = 12;
             // 
-            // label8
+            // btnGuncelleSiparisBilgilerini
             // 
-            label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label8.Location = new Point(15, 225);
-            label8.Name = "label8";
-            label8.Size = new Size(83, 33);
-            label8.TabIndex = 22;
-            label8.Text = "Cihaz Id:";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
+            btnGuncelleSiparisBilgilerini.BackColor = Color.MistyRose;
+            btnGuncelleSiparisBilgilerini.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btnGuncelleSiparisBilgilerini.FlatAppearance.MouseDownBackColor = Color.Red;
+            btnGuncelleSiparisBilgilerini.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnGuncelleSiparisBilgilerini.FlatStyle = FlatStyle.Flat;
+            btnGuncelleSiparisBilgilerini.Font = new Font("Times New Roman", 14F, FontStyle.Bold);
+            btnGuncelleSiparisBilgilerini.Location = new Point(251, 489);
+            btnGuncelleSiparisBilgilerini.Margin = new Padding(3, 4, 3, 4);
+            btnGuncelleSiparisBilgilerini.Name = "btnGuncelleSiparisBilgilerini";
+            btnGuncelleSiparisBilgilerini.Size = new Size(157, 37);
+            btnGuncelleSiparisBilgilerini.TabIndex = 11;
+            btnGuncelleSiparisBilgilerini.Text = "GÜNCELLE";
+            btnGuncelleSiparisBilgilerini.UseVisualStyleBackColor = false;
+            btnGuncelleSiparisBilgilerini.Click += btnGuncelle_Click;
+            // 
+            // textBoxGuncelleSiparisSTT
+            // 
+            textBoxGuncelleSiparisSTT.Location = new Point(193, 107);
+            textBoxGuncelleSiparisSTT.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisSTT.Multiline = true;
+            textBoxGuncelleSiparisSTT.Name = "textBoxGuncelleSiparisSTT";
+            textBoxGuncelleSiparisSTT.Size = new Size(215, 28);
+            textBoxGuncelleSiparisSTT.TabIndex = 4;
+            textBoxGuncelleSiparisSTT.TextChanged += textBoxSilCihazTuru_TextChanged;
+            // 
+            // textBoxGuncelleSiparisOT
+            // 
+            textBoxGuncelleSiparisOT.Location = new Point(193, 61);
+            textBoxGuncelleSiparisOT.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisOT.Multiline = true;
+            textBoxGuncelleSiparisOT.Name = "textBoxGuncelleSiparisOT";
+            textBoxGuncelleSiparisOT.Size = new Size(215, 28);
+            textBoxGuncelleSiparisOT.TabIndex = 3;
+            // 
+            // textBoxGuncelleSiparisNo
+            // 
+            textBoxGuncelleSiparisNo.Location = new Point(193, 16);
+            textBoxGuncelleSiparisNo.Margin = new Padding(3, 4, 3, 4);
+            textBoxGuncelleSiparisNo.Multiline = true;
+            textBoxGuncelleSiparisNo.Name = "textBoxGuncelleSiparisNo";
+            textBoxGuncelleSiparisNo.Size = new Size(215, 28);
+            textBoxGuncelleSiparisNo.TabIndex = 2;
+            // 
+            // dataGridViewSiparisGuncelle
+            // 
+            dataGridViewSiparisGuncelle.BackgroundColor = SystemColors.Info;
+            dataGridViewSiparisGuncelle.BorderStyle = BorderStyle.Fixed3D;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridViewSiparisGuncelle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewSiparisGuncelle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Info;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.DodgerBlue;
+            dataGridViewCellStyle4.SelectionForeColor = Color.AliceBlue;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridViewSiparisGuncelle.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewSiparisGuncelle.Location = new Point(14, 67);
+            dataGridViewSiparisGuncelle.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewSiparisGuncelle.Name = "dataGridViewSiparisGuncelle";
+            dataGridViewSiparisGuncelle.RowHeadersWidth = 51;
+            dataGridViewSiparisGuncelle.Size = new Size(493, 508);
+            dataGridViewSiparisGuncelle.TabIndex = 19;
+            dataGridViewSiparisGuncelle.CellContentClick += dataGridViewSiparisGuncelle_CellContentClick;
+            // 
+            // txtAramaSiparisGuncelle
+            // 
+            txtAramaSiparisGuncelle.Location = new Point(14, 32);
+            txtAramaSiparisGuncelle.Margin = new Padding(3, 4, 3, 4);
+            txtAramaSiparisGuncelle.Name = "txtAramaSiparisGuncelle";
+            txtAramaSiparisGuncelle.Size = new Size(492, 27);
+            txtAramaSiparisGuncelle.TabIndex = 18;
+            txtAramaSiparisGuncelle.TextChanged += txtAramaSiparisGuncelle_TextChanged;
             // 
             // Form11
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(830, 446);
+            ClientSize = new Size(949, 595);
             Controls.Add(panel1);
             Controls.Add(dataGridViewSiparisGuncelle);
             Controls.Add(txtAramaSiparisGuncelle);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form11";
             Text = "Sipariş Bilgilerini Düzenle ve Güncelle";
             Load += Form11_Load;
@@ -307,15 +368,12 @@
         private Panel panel1;
         private DataGridView dataGridViewSiparisGuncelle;
         private TextBox txtAramaSiparisGuncelle;
-        private Button btnSil;
-        private TextBox textBoxSilCihazAciklamasi;
-        private TextBox textBoxSilCihazTuru;
-        private TextBox textBoxSilCihazAdi;
-        private TextBox textBox;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Button btnGuncelleSiparisBilgilerini;
+        private TextBox textBoxGuncelleSiparisSTT;
+        private TextBox textBoxGuncelleSiparisOT;
+        private TextBox textBoxGuncelleSiparisNo;
+        private TextBox textBoxGuncelleSiparisAcıklaması;
+        private TextBox textBoxGuncelleSiparisVeren;
         private Label label3;
         private Label label4;
         private Label label2;
@@ -324,5 +382,12 @@
         private Label label8;
         private Label label5;
         private Label label6;
+        private Label label9;
+        private TextBox textBoxGuncelleSiparisAdı;
+        private Label label10;
+        private ComboBox comboBoxGuncelleSiparisTuru;
+        private ComboBox comboBoxGuncelleCihazId;
+        private TextBox textBoxGuncelleSiparisMiktarı;
+        private ComboBox comboBoxGuncelleSiparisDurumu;
     }
 }
