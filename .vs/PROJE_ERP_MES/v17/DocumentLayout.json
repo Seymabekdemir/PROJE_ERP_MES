@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\work\\GitProjects\\PROJE_ERP_MES\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\work\\GitProjects\\PROJE_ERP_MES\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\work\\GitProjects\\PROJE_ERP_MES\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:masa\u00FCst\u00FC uygulamas\u0131\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -13,7 +25,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 243,
+          "DockedHeight": 205,
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -23,20 +35,55 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ERP_MES.csproj",
+              "DocumentMoniker": "C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj",
+              "RelativeDocumentMoniker": "masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj",
+              "ToolTip": "C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj",
+              "RelativeToolTip": "masa\u00FCst\u00FC uygulamas\u0131\\ERP_MES.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-31T08:25:05.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\work\\GitProjects\\PROJE_ERP_MES\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\work\\GitProjects\\PROJE_ERP_MES\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-07-31T08:23:47.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\work\\GitProjects\\PROJE_ERP_MES\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\work\\GitProjects\\PROJE_ERP_MES\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-31T08:23:46.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\.gitignore",
               "RelativeDocumentMoniker": "masa\u00FCst\u00FC uygulamas\u0131\\.gitignore",
               "ToolTip": "C:\\work\\GitProjects\\PROJE_ERP_MES\\masa\u00FCst\u00FC uygulamas\u0131\\.gitignore",
               "RelativeToolTip": "masa\u00FCst\u00FC uygulamas\u0131\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-31T07:14:32.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:14:32.207Z"
             }
           ]
         },
         {
-          "DockedHeight": 22,
+          "DockedHeight": 60,
           "SelectedChildIndex": -1,
           "Children": [
             {
