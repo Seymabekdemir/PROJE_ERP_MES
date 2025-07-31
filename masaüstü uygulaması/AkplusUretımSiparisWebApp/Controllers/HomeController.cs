@@ -1,32 +1,64 @@
 using System.Diagnostics;
 using AkplusUretımSiparisWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using AkplusUretımSiparisWebApp.Data;
+using AkplusUretımSiparisWebApp.Models;
 
 namespace AkplusUretımSiparisWebApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context; // EKLENDİ
 
-        public HomeController(ILogger<HomeController> logger)
+        // Constructor
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
+            _context = context; // EKLENDİ
         }
 
-        public IActionResult Index()
+        [HttpPost]
+        [HttpPost]
+        public IActionResult Guncelle(string SiparisNo, string YeniDurum)
         {
-            return View();
+            if (string.IsNullOrEmpty(SiparisNo) || string.IsNullOrEmpty(YeniDurum))
+            {
+                return RedirectToAction("Index");
+            }
+
+            var siparis = _context.Siparisler.FirstOrDefault(s => s.SiparisNo == SiparisNo);
+            if (siparis != null)
+            {
+                siparis.SiparisDurumu = YeniDurum;
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
         }
 
-        public IActionResult Privacy()
+        public IActionResult Index(List<string> durumlar)
         {
-            return View();
-        }
+            var viewModel = new SiparisFiltreViewModel();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var query = _context.Siparisler
+                .Include(s => s.Cihaz)
+                .AsQueryable();
+
+            if (durumlar != null && durumlar.Any())
+            {
+                query = query.Where(s => durumlar.Contains(s.SiparisDurumu));
+                viewModel.SecilenDurumlar = durumlar;
+            }
+            else
+            {
+                viewModel.SecilenDurumlar = new List<string>();
+            }
+
+            viewModel.Siparisler = query.ToList();
+
+            return View(viewModel);
         }
     }
 }
