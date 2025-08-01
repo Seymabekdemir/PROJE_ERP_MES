@@ -84,11 +84,6 @@ namespace ERP_MES
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBoxAramaSiparis_TextChanged(object sender, EventArgs e)
         {
             CihazAramaYap();
@@ -107,12 +102,14 @@ namespace ERP_MES
                 // Seçilen satırdaki hücre değerlerini al
                 string SiparisOT = row.Cells["SiparisOT"].Value.ToString();
                 string SiparisSTT = row.Cells["SiparisSTT"].Value.ToString();
+                string SiparisDurumu = row.Cells["SiparisDurumu"].Value.ToString();
 
 
                 // İlgili hücreleri textboxlara yaz
                 textBoxDurumOT.Text = row.Cells["SiparisOT"].Value.ToString();
                 textBoxDurumSTT.Text = row.Cells["SiparisSTT"].Value.ToString();
-                
+                textBoxDurumSiparisDurum.Text = row.Cells["SiparisDurumu"].Value.ToString();
+
             }
 
         

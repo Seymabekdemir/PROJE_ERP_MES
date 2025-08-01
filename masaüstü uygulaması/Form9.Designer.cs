@@ -36,7 +36,7 @@
             label3 = new Label();
             textBoxDurumOT = new TextBox();
             textBoxDurumSTT = new TextBox();
-            textBox3 = new TextBox();
+            textBoxDurumSiparisDurum = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSiparisDurumTakip).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             dataGridViewSiparisDurumTakip.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewSiparisDurumTakip.Location = new Point(12, 41);
             dataGridViewSiparisDurumTakip.Name = "dataGridViewSiparisDurumTakip";
+            dataGridViewSiparisDurumTakip.RowHeadersWidth = 51;
             dataGridViewSiparisDurumTakip.Size = new Size(783, 207);
             dataGridViewSiparisDurumTakip.TabIndex = 1;
             dataGridViewSiparisDurumTakip.CellContentClick += dataGridViewSiparisDurumTakip_CellContentClick;
@@ -92,7 +93,7 @@
             // 
             // textBoxDurumOT
             // 
-            textBoxDurumOT.Location = new Point(264, 263);
+            textBoxDurumOT.Location = new Point(303, 261);
             textBoxDurumOT.Multiline = true;
             textBoxDurumOT.Name = "textBoxDurumOT";
             textBoxDurumOT.Size = new Size(286, 25);
@@ -101,21 +102,20 @@
             // 
             // textBoxDurumSTT
             // 
-            textBoxDurumSTT.Location = new Point(264, 307);
+            textBoxDurumSTT.Location = new Point(303, 311);
             textBoxDurumSTT.Multiline = true;
             textBoxDurumSTT.Name = "textBoxDurumSTT";
             textBoxDurumSTT.Size = new Size(286, 25);
             textBoxDurumSTT.TabIndex = 11;
             textBoxDurumSTT.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // textBoxDurumSiparisDurum
             // 
-            textBox3.Location = new Point(264, 360);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(286, 86);
-            textBox3.TabIndex = 12;
-            textBox3.TextChanged += textBox3_TextChanged;
+            textBoxDurumSiparisDurum.Location = new Point(303, 365);
+            textBoxDurumSiparisDurum.Margin = new Padding(3, 2, 3, 2);
+            textBoxDurumSiparisDurum.Name = "textBoxDurumSiparisDurum";
+            textBoxDurumSiparisDurum.Size = new Size(286, 23);
+            textBoxDurumSiparisDurum.TabIndex = 12;
             // 
             // Form9
             // 
@@ -123,7 +123,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxDurumSiparisDurum);
             Controls.Add(textBoxDurumSTT);
             Controls.Add(textBoxDurumOT);
             Controls.Add(label3);
@@ -149,6 +149,6 @@
         private Label label3;
         private TextBox textBoxDurumOT;
         private TextBox textBoxDurumSTT;
-        private TextBox textBox3;
+        private TextBox textBoxDurumSiparisDurum;
     }
 }

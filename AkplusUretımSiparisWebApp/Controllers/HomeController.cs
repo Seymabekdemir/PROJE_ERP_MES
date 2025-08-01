@@ -20,7 +20,6 @@ namespace AkplusUretımSiparisWebApp.Controllers
         }
 
         [HttpPost]
-        [HttpPost]
         public IActionResult Guncelle(string SiparisNo, string YeniDurum)
         {
             if (string.IsNullOrEmpty(SiparisNo) || string.IsNullOrEmpty(YeniDurum))
