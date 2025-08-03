@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient; 
+using Microsoft.Data.SqlClient;
 
 
 namespace ERP_MES
@@ -184,4 +184,3 @@ namespace ERP_MES
 
     }
 }
-

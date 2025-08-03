@@ -1,14 +1,16 @@
-using AkplusUretýmSiparisWebApp.Data;  // AppDbContext için gerekli
-using Microsoft.EntityFrameworkCore;    // UseSqlServer için gerekli
+ï»¿using AkplusUretÄ±mSiparisWebApp.Data;
+using Microsoft.EntityFrameworkCore;    // UseSqlServer iÃ§in gerekli
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ???? AppDbContext hizmet olarak tanýtýlýyor
+// ???? AppDbContext hizmet olarak tanÃ½tÃ½lÃ½yor
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Diðer servisler
+// DiÃ°er servisler
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+
 
 var app = builder.Build();
 

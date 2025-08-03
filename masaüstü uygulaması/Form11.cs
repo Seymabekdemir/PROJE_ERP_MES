@@ -108,18 +108,42 @@ namespace ERP_MES
                 {
                     baglanti.Open();
                     string query = "UPDATE Siparisler SET SiparisNo=@SiparisNo, SiparisAcıklaması = @SiparisAcıklaması," +
-                        " SiparisOT = @SiparisOT, SiparisTuru = @SiparisTuru, SiparisDurumu = @SiparisDurumu, SiparisSTT = @SiparisSTT, " +
-                        "SiparisMiktarı = @SiparisMiktarı, Olusturan = @Olusturan WHERE CihazId = @CihazId";
+                   " SiparisOT = @SiparisOT, SiparisTuru = @SiparisTuru, SiparisDurumu = @SiparisDurumu, SiparisSTT = @SiparisSTT, " +
+                   "SiparisMiktarı = @SiparisMiktarı, Olusturan = @Olusturan WHERE CihazId = @CihazId";
+
                     SqlCommand command = new SqlCommand(query, baglanti);
-                    command.Parameters.AddWithValue("@SiparisNo", textBoxGuncelleSiparisNo.Text);
+                    // 1. SiparisMiktarı - int
+                    if (!int.TryParse(textBoxGuncelleSiparisMiktarı.Text, out int miktar))
+                    {
+                        MessageBox.Show("Lütfen geçerli bir sipariş miktarı girin.");
+                        return;
+                    }
+                    command.Parameters.AddWithValue("@SiparisMiktarı", miktar);
+
+                    // 2. SiparisOT - date
+                    if (!DateTime.TryParse(textBoxGuncelleSiparisOT.Text, out DateTime ot))
+                    {
+                        MessageBox.Show("Sipariş Oluşturma Tarihi geçersiz.");
+                        return;
+                    }
+                    command.Parameters.AddWithValue("@SiparisOT", ot);
+
+                    // 3. SiparisSTT - date
+                    if (!DateTime.TryParse(textBoxGuncelleSiparisSTT.Text, out DateTime stt))
+                    {
+                        MessageBox.Show("Sipariş Teslim Tarihi geçersiz.");
+                        return;
+                    }
+                    command.Parameters.AddWithValue("@SiparisSTT", stt);
+
+                    // Diğer string alanlar
                     command.Parameters.AddWithValue("@SiparisAcıklaması", textBoxGuncelleSiparisAcıklaması.Text);
-                    command.Parameters.AddWithValue("@SiparisOT", textBoxGuncelleSiparisOT.Text);
                     command.Parameters.AddWithValue("@SiparisTuru", comboBoxGuncelleSiparisTuru.Text);
                     command.Parameters.AddWithValue("@SiparisDurumu", comboBoxGuncelleSiparisDurumu.Text);
-                    command.Parameters.AddWithValue("@SiparisSTT", textBoxGuncelleSiparisSTT.Text);
-                    command.Parameters.AddWithValue("@SiparisMiktarı", textBoxGuncelleSiparisMiktarı.Text);
                     command.Parameters.AddWithValue("@Olusturan", textBoxGuncelleSiparisVeren.Text);
                     command.Parameters.AddWithValue("@CihazId", comboBoxGuncelleCihazId.SelectedValue);
+                    command.Parameters.AddWithValue("@SiparisNo", textBoxGuncelleSiparisNo.Text);
+
                     command.ExecuteNonQuery();
                     MessageBox.Show("Cihaz başarıyla güncellendi.");
 
@@ -245,4 +269,3 @@ namespace ERP_MES
 
 
 
-    

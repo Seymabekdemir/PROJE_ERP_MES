@@ -141,7 +141,7 @@ namespace ERP_MES
 
         private void comboBoxCihazId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxCihazId.SelectedIndex <= 0)
+            if (comboBoxCihazId.SelectedIndex <= 0)
             {
                 textBoxSiparisNo.Text = "";
                 return;
@@ -160,7 +160,7 @@ namespace ERP_MES
                 string yeniSiparisNo;
 
                 if (result != DBNull.Value && result != null)
-                {               
+                {
                     string maxSiparisNo = result.ToString();
                     string[] parcalar = maxSiparisNo.Split('.');
 
